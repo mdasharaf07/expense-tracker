@@ -13,8 +13,7 @@ public class ExpenseTrackerAppDAO {
     private static final String ADD_EXPENSE = "INSERT INTO expense (amount, description, category_id) VALUES (?, ?, ?)";
     private static final String UPDATE_EXPENSE = "UPDATE expense SET amount = ?, description = ?, category_id = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?";
     private static final String DELETE_EXPENSE = "DELETE FROM expense WHERE id = ?";
-    private static final String GET_EXPENSES_BY_CATEGORY = 
-        "SELECT e.* FROM expense e JOIN category c ON e.category_id = c.id WHERE c.category_name = ? ORDER BY e.created_at DESC";
+    private static final String GET_EXPENSES_BY_CATEGORY = "SELECT e.* FROM expense e JOIN category c ON e.category_id = c.id WHERE c.category_name = ? ORDER BY e.created_at DESC";
     
     public List<Expense> getAllExpenses() throws SQLException {
         List<Expense> expenses = new ArrayList<>();
