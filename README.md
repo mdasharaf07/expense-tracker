@@ -1,5 +1,5 @@
 # Expense Tracker (Java + MySQL + Swing)
-A simple **Expense Tracker Application** built with **Java (Swing)** and **MySQL**, where users can manage categories and expenses. The project demonstrates **JDBC database connectivity**, **DAO design pattern**, and a clean separation of model and database logic.  
+A simple **Expense Tracker Application** built with **Java (Swing)** and **MySQL**, where users can manage categories and expenses. The project demonstrates **JDBC database connectivity**, **DAO design pattern**, and a clean separation of model and database logic. 
 
 # Features
 - Manage expense **categories** (Food, Travel, Shopping, etc.)
@@ -47,19 +47,32 @@ USE expenseTracker;
 # Project Structure
 
 expense-tracker/
+
 │── src/
+
 │   ├── main/java/com/tracker
+
 │   │   ├── model/
+
 │   │   │   └── Expense.java, Category.java
+
 │   │   ├── dao/
+
 │   │   │   └── ExpenseDAO.java, CategoryDAO.java
+
 │   │   ├── gui/
+
 │   │   │   └── MainGUI.java
+
 │   │   └── DatabaseConnection.java
+
 │   └──-|
+
 │       └── Main.java
+
 │── pom.xml
+
 │── README.md
 
 # Author
-Mohamed Asharaf
+Created by Mohamed Asharaf
