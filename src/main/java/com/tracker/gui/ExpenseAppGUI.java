@@ -320,7 +320,11 @@ class ExpenseTrackerAppGUI extends JFrame {
     }
 
     private void refreshExpense() {
+        clearFields();
         loadExpenses();
+        filterComboBox.setSelectedIndex(0);
+        JOptionPane.showMessageDialog(this, "Fields cleared and expenses refreshed.", "Info",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void loadSelectedExpense() {
@@ -401,6 +405,7 @@ class ExpenseTrackerAppGUI extends JFrame {
         titleField.setText("");
         descriptionArea.setText("");
         categoryInputComboBox.setSelectedIndex(0);
+        
     }
 
 }
@@ -568,6 +573,7 @@ class CategoryAppGUI extends JFrame {
     }
 
     private void refreshCategory() {
+
         loadCategories();
     }
 
@@ -606,5 +612,7 @@ class CategoryAppGUI extends JFrame {
             e.printStackTrace();
         }
     }
+
+    
 
 }
