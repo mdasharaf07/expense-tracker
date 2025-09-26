@@ -119,7 +119,6 @@ class ExpenseTrackerAppGUI extends JFrame {
         descriptionArea.setLineWrap(true);
         descriptionArea.setWrapStyleWord(true);
 
-        // Replace "Completed" checkbox with Category dropdown
         String[] categoryOptions = loadCategoryOptions();
         categoryInputComboBox = new JComboBox<>(categoryOptions);
 
