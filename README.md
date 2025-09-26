@@ -11,17 +11,20 @@ A simple **Expense Tracker Application** built with **Java (Swing)** and **MySQL
 ## Database Setup
 
 ### 1. Create Database
-sql
+```sql
 CREATE DATABASE expenseTracker;
 USE expenseTracker;
+```
 
-CREATE TABLE category (
+### 2. create table category
+```CREATE TABLE category (
     id INT PRIMARY KEY AUTO_INCREMENT,
     category_name VARCHAR(255) UNIQUE NOT NULL
 );
+```
 
-
-CREATE TABLE expense (
+### 3. create table expense
+```CREATE TABLE expense (
     id INT PRIMARY KEY AUTO_INCREMENT,
     amount INT NOT NULL,
     description VARCHAR(255),
@@ -30,6 +33,7 @@ CREATE TABLE expense (
     category_id INT NOT NULL,
     FOREIGN KEY (category_id) REFERENCES category(id) ON DELETE CASCADE
 );
+```
 
 # Technologies Used
 - Java 17+ (or compatible version)
